@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- Admin page with form for insertion of new rooms -->
+<html>
+    <head>
+        <title>Admin | Create Room</title>
+        <!-- Linking minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Linking minified JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Linking cascading style sheet for index.html -->
+        <link rel="stylesheet" type="text/css" href="signupstyle.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function success() {
+               alert("Logged out successfully!");
+            }
+            function insert() {
+                var id=document.getElementById("uid").value;
+                var type=document.getElementById("type").value;
+                var loc=document.getElementById("loc").value;
+                var chg=document.getElementById("chg").value;
+                alert("You entered the following details:-\nRoom ID: "+id
+                    +"\nRoom type: "+type+"\nRoom location: "+loc
+                    +"\nRoom charge: "+chg);
+            }
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Four Towers Hostel</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="admininsert.html">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                Insert Room
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="AdminRooms">
+                                <span class="glyphicon glyphicon-th-large"></span>
+                                Manage Rooms
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="AdminUsers">
+                                <span class="glyphicon glyphicon-user"></span>
+                                View Users
+                            </a>
+                        </li>
+                        <li class="active" onclick="return success()">
+                            <a href="login.html">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="bg" class="bg-image">
+            <center>
+                <div id="content">
+                    Enter room details<br><br>
+                    <form action="Insert" onsubmit="return insert()" method="GET">
+                        <div class="form-group">
+                            <input type="number" class="form-control input-sm" id="uid" name="roomuid" placeholder="Enter room ID" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" id="type" name="roomtype" placeholder="Enter room type" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" id="loc" name="roomloc" placeholder="Enter room location" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control input-sm" id="chg" name="roomchg" placeholder="Enter monthly room charge in Rs." required>
+                        </div>
+                        <input type="submit" value="Create Room" class="btn btn-primary btn-xs"><br><br>                        
+                    </form>
+                </div>
+            </center>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+/*
+* CSS for admin side pages
+*/
+#bg{
+    padding-top: 75px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background-image: url("images/bg-room.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+#content{
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    font-family: roboto;
+}
+#searchbar{
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    max-width: 400px;
+    font-family: roboto;
+}
+input{
+    color: #000000
+}
+#tab{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 1200px;
+    font-family: roboto;
+}
+a:link{
+    color: #24eeff;
+}
+a:hover{
+    color: #ffffff;
+}

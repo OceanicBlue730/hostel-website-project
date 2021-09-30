@@ -1,0 +1,23 @@
+/*
+* CSS for index page
+*/
+#bg{
+    padding-top: 75px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background-image: url("images/bg-room.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+#bg-content{
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    font-family: roboto;
+}

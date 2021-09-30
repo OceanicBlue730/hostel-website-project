@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Page for signing up new student users -->
+<html>
+    <head>
+        <title>Four Towers Hostel | Sign Up</title>
+        <!-- Linking minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Linking minified JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Linking cascading style sheet for index.html -->
+        <link rel="stylesheet" type="text/css" href="signupstyle.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function success() {
+                var name=document.getElementById("name").value;
+                var phone=document.getElementById("phone").value;
+                var email=document.getElementById("email").value;
+                alert("Submitted the following details:\nFull name: "+name
+                    +"\nPhone number: "+phone+"\nEmail ID: "+email)
+            }
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">Four Towers Hostel</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="login.html">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                                Login
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="signup.html">
+                                <span class="glyphicon glyphicon-user"></span>
+                                Sign Up
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="bg" class="bg-image">
+            <center>
+                <div id="content">
+                    Enter your details<br><br>
+                    <form onsubmit="return success()" action="SignUp" method="GET">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" id="name" name="fullname" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control input-sm" id="phone" name="phoneno" pattern="[0-9]{10}" placeholder="Enter phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control input-sm" id="email" name="emailid" placeholder="Enter e-mail ID" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control input-sm" id="pw" name="password" placeholder="Create password" required>
+                        </div>                        
+                        <input type="submit" value="Sign Up" class="btn btn-primary btn-xs"><br><br>
+                    </form>
+                    <a href="login.html">
+                        <p style="font-family: sans-serif; font-size: 10px;">Already an existing user? Login</p>
+                    </a>
+                </div>
+            </center>
+        </div>
+    </body>
+</html>
